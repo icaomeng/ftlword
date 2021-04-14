@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.155:5432/word
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 8799
+  servlet:
+    context-path: /ftl
+
+uploadFilePath: E:\apache-tomcat-9.0.41\apache-tomcat-9.0.41\webapps\rfwg_files
+

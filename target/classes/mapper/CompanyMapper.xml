@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cao.ftlword.mapper.CompanyMapper">
+
+    <insert id="insertCompany">
+        insert into t_company(uuid,name,web_url,create_user,create_time,dist,range,about)
+        values(#{uuid},#{name},#{webUrl},#{createUser},#{createTime},#{dist},#{range},#{about})
+    </insert>
+
+    <insert id="insertCompanyAttach">
+        insert into t_company_attach(uuid,attach_path,com_id)
+        values(#{uuid},#{attach_path},#{comId})
+    </insert>
+
+    <select id="selectCompany" resultType="com.cao.ftlword.entity.Company">
+        select * from t_company where uuid=#{uuid}
+    </select>
+
+    <select id="selectCompanyAttach" resultType="map">
+        select * from t_company_attach where com_id=#{uuid}
+    </select>
+
+</mapper>

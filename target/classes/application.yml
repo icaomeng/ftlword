@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 102400MB
+      max-request-size: 102400MB
+mybatis-plus:
+  configuration:
+    # 不打印sql
+#    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+    # 打印sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # map集合值为null时也返回
+    call-setters-on-nulls: true
+
+multipart:
+  enabled: true
+  max-file-size: 100MB
+  max-request-size: 100MB
+
+
+
